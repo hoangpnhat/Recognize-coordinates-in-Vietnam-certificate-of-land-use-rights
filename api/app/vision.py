@@ -11,6 +11,6 @@ if any(gpu_devices):
 
 from doctr.models import ocr_predictor
 
-predictor = ocr_predictor(pretrained=True)
+predictor = ocr_predictor(det_arch="db_mobilenet_v3_large", reco_arch="crnn_mobilenet_v3_small",pretrained=True)
 det_predictor = predictor.det_predictor
 reco_predictor = predictor.reco_predictor
